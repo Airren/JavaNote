@@ -49,13 +49,76 @@ start native 方法 openjdk.java.net
   #### 如何实现处理线程的返回值
   实现方式主要有三种
   - 主线程等待法（有多个变量的时候比较难处理，循环等待的时间是不精确的）
-  - 使用Thread的join()方法阻塞当前线程以等待子线程处理完毕
+  - 使用Thread的join()方法阻塞当前线程以等待子线程处理完毕(粒度不够细)
+  - 通过Callable接口是实现： 通过FutureTask 或者 线程池获取
   
+  ## 5.线程的状态
 
+  Thread 源码中有enum state
+  六个状态：
+  - 新建 NEW: 创建后尚未启动的线程状态
+  - 运行 RUNNABLE：包含Running 和 Ready(等待时间片轮转)
+  - 无限期等待 WAITING：不会分配CPU执行时间，需要被显式的唤醒
+    1. 没有设置Timeout参数的Object.wait() 方法
+    2. 没有设置Timeout参数的Thread.join() 方法
+    3. LockSupport.park()方法
+  - 限期等待 Time Waiting 在一定时间后会由系统自动唤醒
+     1. Thread.sleep()方法
+     2. 设置了Timeout参数的Object.wait()方法。
+     3. 设置了Timeout参数的Thread.join()方法。
+     4. LockSupport.parkNanos()方法。
+     5. LockSupport.patkUtil()方法。
+  - 阻塞 Blocked 等待获取排它锁 synchronized 关键字
+  - 结束 Terminated : 已终止线程的状态，线程已经结束执行。（已经终止的线程不可以再次执行，否则会抛出IlleagleThreadStateException）
+  ## 6 sleep和wait的区别
+  基本的差别：
+  - sleep() 是Thread类中定义的方法， wait是Object类中定义的方法。
+  - sleep()方法可以在任何地方使用
+  - wait()方法只能在synchronized方法或synchronized块中使用
+  最主要的本质区别
+  - Thread.sleep()只会让出CPU， 不会导致锁行为的改变
+  - Object.wait() 不仅会让出CPU，还会释放已经占有的同步资源锁
+  ```
 
-
+  ```
+  ## 7.notify 和notifyall的区别
+  唤醒 wait
+  #### 两个概念
+  - 锁池 EntryList
+  - 等待池 WaitSet
   
+  **锁池** 假设线程A已经拥有了某个对象(不是类)的锁，而其他线程B/C想要调用这个对象的某个synchronize方法(或者块)，优于B/C线程在进入对象的synchronized方法(或者块)之前必须获得该对象锁的拥有权， 而恰巧该对象的锁目前正在线程A所占用， 此时B/C线程就会被阻塞， 进入一个地方去等待锁的释放， 这个地方便是该对象的锁池。
+  **等待池** 假设线程A调用了某个对象的wait()方法， 线程A就会释放该对象的锁， 同时线程A就进入了该对象的等待池中，进入到等待池中的线程不会去竞争该对象的资源锁。
+
+  #### notify和notifyall的区别
+  - notifyAll 会让所有处于等待池中的线程全部进入锁池去竞争获取锁的机会
+  - notify 只会随机选取一个处于等待池中的线程进入锁池去竞争获取锁的机会
+
+  volatile 修饰的变量，一旦线程A对其进行改动， 线程 B/C/D能够立马看线程A对其的改动
+  ## 8 yield函数
+  概念
+  当调用Thread.yield()函数时， 会给当前线程调度器一个当前线程愿意让出CPU的暗示，但是线程调度器可能会忽略这个暗示。
+  yield并不会让当前线程释放已经获得的锁
+  ## 9. 如何中断线程
+  已经被抛弃的方法：
+  - 通过调用stop()方法停止线程 太过于暴力，线程不安全，数据不同步
+  - 通过调用suspend() 和 resume() 方法
+  目前使用的方法
+  - 调用interrupt()，通知线程应该中断了
+    1. 如果线程处于被阻塞状态，那么线程将立即退出被阻塞状态，并且抛出一个InterruptedException异常。
+    2. 如果线程处于正常活动状态，那么会将该线程的中断标志设置为true。被设置中断标志的线程将会继续正常运行，不受影响。
+  - 需要被调用的线程配合中断
+    1. 在正常运行任务时，经常检查本线程的中断标志位，如果设置的了中断标志位就自行停止线程。
+    2. 如果线程处于正常活跃状态，那么会将该线程的中断标志设置为true。 被设置中断标志的线程将继续正常运行，不受影响。
+  
+## 10. 前述方法以及线程状态总结
+ 状态转换图
 
 
+ ## 彩蛋 如何有效谈薪资
+ 增加自己的筹码
+ - 尽量打听公司岗位职位的薪酬幅度 阿里p6 百度 p4 p5 
+ - 感知目标公司的缺人程度， 工作的紧急程度  入职时间
+ - 最有效的方式是已经具备了有竞争力的offer 
 
 
