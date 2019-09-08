@@ -64,3 +64,64 @@ public class Main {
 1 1 0
  */
 ```
+
+
+
+
+```
+第二题
+```
+```
+/**
+ * describe:
+ *
+ * @author jehu
+ * @date 2019/09/08
+ */
+package iqiyi;
+
+import java.util.Scanner;
+
+public class NewMain {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            int red = sc.nextInt();
+            int black = sc.nextInt();
+            double sum = removeball(red,black);
+            String str = String.format("%.5f", sum);
+            System.out.println(str);
+        }
+    }
+    public static double removeball (int red, int black){
+        if (red == 0 ) {
+            return 0.0d;
+        }
+        if (black == 0) {
+            return 0.0d;
+        }
+        double one = (double)red/(red+black);
+        black-=1;
+        double two = 0.0d;
+        double three = 0.0d;
+        double other = 1.0d;
+        double B_black = 1.0d;
+        if (black+red > 2) {
+            other = 1.0d - one;
+            B_black = (double)black/(red+black);
+            if (B_black > 0.0d) {
+                black-=1;
+                if (black > 0){
+                    double C_black = (double)black/(red+black);
+                    two = removeball(red,black-1)*C_black;
+                }
+                if (red > 0) {
+                    double C_red = (double)red/(red+black);
+                    three = removeball(red-1,black)*C_red;
+                }
+            }
+        }
+        return one+(other*B_black*(two+three));
+    }
+}
+```
