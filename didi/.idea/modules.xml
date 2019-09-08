@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/didi.iml" filepath="$PROJECT_DIR$/didi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/online-judge.iml" filepath="$PROJECT_DIR$/online-judge.iml" />
     </modules>
   </component>
 </project>

@@ -121,4 +121,6 @@ start native 方法 openjdk.java.net
  - 感知目标公司的缺人程度， 工作的紧急程度  入职时间
  - 最有效的方式是已经具备了有竞争力的offer 
 
+iiii
+
 
