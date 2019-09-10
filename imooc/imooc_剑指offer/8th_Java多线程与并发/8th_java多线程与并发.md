@@ -40,6 +40,7 @@ Java线程知识考点
 start native 方法 openjdk.java.net
 - 调用start() 方法会创建一个新的子线程并启动
 - run()方法只是一个Thread的一个普通方法的调用
+  ![](img/2019-09-08-22-37-41.png)
   
 ## 3. Thread 和Runnable 的区别
   - Thread 实现了Runnable接口的类，使得run支持多线程
@@ -115,7 +116,7 @@ start native 方法 openjdk.java.net
   
 ## 10. 前述方法以及线程状态总结
  状态转换图
- 
+
 ![](img/2019-09-08-21-35-38.png)
  
  
