@@ -1,4 +1,4 @@
-package com.company.test;
+package com.company.dianxin._3rd;
 
 import java.util.Scanner;
 
