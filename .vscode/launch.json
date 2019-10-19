@@ -2,9 +2,37 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - Test",
+            "name": "CodeLens (Launch) - JosephCircle",
             "request": "launch",
-            "mainClass": "Test"
+            "mainClass": "JosephCircle"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "src.graph.Main",
+            "projectName": "JavaNote_e5493f33"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ShellSort",
+            "request": "launch",
+            "mainClass": "ShellSort",
+            "projectName": "JavaNote_e5493f33"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - InsertionSort",
+            "request": "launch",
+            "mainClass": "InsertionSort",
+            "projectName": "JavaNote_e5493f33"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SelectionSort",
+            "request": "launch",
+            "mainClass": "SelectionSort",
+            "projectName": "JavaNote_e5493f33"
         },
         {
             "type": "java",
@@ -15,92 +43,10 @@
         },
         {
             "type": "java",
-            "name": "CodeLens (Launch) - ClassLoaderChecker",
-            "request": "launch",
-            "mainClass": "com.interview.javabasic.reflect.ClassLoaderChecker"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Solution",
-            "request": "launch",
-            "mainClass": "Solution"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Main",
-            "request": "launch",
-            "mainClass": "_2nd.Main"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Main",
-            "request": "launch",
-            "mainClass": "_1st.Main"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - CollectionsDemo",
-            "request": "launch",
-            "mainClass": "CollectionsDemo"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Main",
-            "request": "launch",
-            "mainClass": "Main"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Combinations",
-            "request": "launch",
-            "mainClass": "Combinations"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - BinarySearch",
-            "request": "launch",
-            "mainClass": "BinarySearch"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Demo",
-            "request": "launch",
-            "mainClass": "Demo"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Demo",
-            "request": "launch",
-            "mainClass": "Demo",
-            "projectName": "LeetCode_6ca8dff4"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - MergeSort",
-            "request": "launch",
-            "mainClass": "MergeSort",
-            "projectName": "LeetCode_6ca8dff4"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - QuickSort",
-            "request": "launch",
-            "mainClass": "QuickSort",
-            "projectName": "LeetCode_6ca8dff4"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Test",
-            "request": "launch",
-            "mainClass": "Test",
-            "projectName": "LeetCode_6ca8dff4"
-        },
-        {
-            "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
             "mainClass": "Main",
-            "projectName": "LeetCode_6ca8dff4"
+            "projectName": "JavaNote_e5493f33"
         }
     ]
 }

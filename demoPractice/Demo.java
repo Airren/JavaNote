@@ -11,11 +11,11 @@ public class Demo {
 		// map.put("key", value);
 		// map.put("1", value);
 		System.out.println("success");
-		Long a =100L;
-		Long b = 100L; 
+		Long a =180L;
+		Long b = 180L; 
 		System.out.println(a == b);
 		System.out.println(a+b);
-		System.out.println(100==100);
+		System.out.println(100L==100L);
     }
 
 }    

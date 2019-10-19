@@ -1,4 +1,4 @@
-package com.company.yinlianshangwu;
+package com.company.yinlianshangwu._1st;
 
 public class Main {
 }
