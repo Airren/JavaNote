@@ -17,7 +17,7 @@ int fib(){
 }
 ```
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_玩转算法面试/img/image-20191017141536960.png" alt="image-20191017141536960" style="zoom:33%;" />
+<img src="img/image-20191017141536960.png" alt="image-20191017141536960" style="zoom:33%;" />
 
 递归会有很多的重复计算，重复的计算量会非常大。
 
@@ -65,9 +65,9 @@ int fib(int n){
 
 递归问题-> 重叠子问题
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_玩转算法面试/img/image-20191017145410009.png" alt="image-20191017145410009" style="zoom:33%;" />
+<img src="img/image-20191017145410009.png" alt="image-20191017145410009" style="zoom:33%;" />
 
 #### 爬楼梯问题
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_玩转算法面试/img/image-20191017145858332.png" alt="image-20191017145858332" style="zoom:33%;" />
+<img src="img/image-20191017145858332.png" alt="image-20191017145858332" style="zoom:33%;" />
 

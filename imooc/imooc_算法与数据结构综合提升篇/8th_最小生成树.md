@@ -2,15 +2,15 @@
 
 ## 有权图 Weight Graph
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191015113148395.png" alt="image-20191015113148395" style="zoom:33%;" />
+<img src="img/image-20191015113148395.png" alt="image-20191015113148395" style="zoom:33%;" />
 
 #### 邻接矩阵 Adjacent Matrix
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191015113222554.png" alt="image-20191015113222554" style="zoom:33%;" />
+<img src="img/image-20191015113222554.png" alt="image-20191015113222554" style="zoom:33%;" />
 
 #### 邻接表
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191015113341451.png" alt="image-20191015113341451" style="zoom:33%;" />
+<img src="img/image-20191015113341451.png" alt="image-20191015113341451" style="zoom:33%;" />
 
 使用Edge 表示每一条连接边
 
@@ -18,13 +18,13 @@
 
 带权无向图、连通图
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191015212607027.png" alt="image-20191015212607027" style="zoom:33%;" />
+<img src="img/image-20191015212607027.png" alt="image-20191015212607027" style="zoom:33%;" />
 
 找V-1条边
 
 #### 切分定理 Cut Property
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191015213744954.png" alt="image-20191015213744954" style="zoom:33%;" />
+<img src="img/image-20191015213744954.png" alt="image-20191015213744954" style="zoom:33%;" />
 
 把图中的节点分成两部分，成为一个**切分(Cut)**
 
@@ -36,11 +36,11 @@
 
 ## Prim算法  Lazy Prim
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191015214638291.png" alt="image-20191015214638291" style="zoom: 50%;" />
+<img src="img/image-20191015214638291.png" alt="image-20191015214638291" style="zoom: 50%;" />
 
 Lazy Prim 最小堆中依然有不会是横切边的边。
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191015214824240.png" alt="image-20191015214824240" style="zoom:50%;" />
+<img src="img/image-20191015214824240.png" alt="image-20191015214824240" style="zoom:50%;" />
 
 Lazy Prim 的时间复杂度为O(ElogE)
 
@@ -50,11 +50,11 @@ Lazy Prim 的时间复杂度为O(ElogE)
 
 IndexMinHeap
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191016094726969.png" alt="image-20191016094726969" style="zoom: 33%;" />
+<img src="img/image-20191016094726969.png" alt="image-20191016094726969" style="zoom: 33%;" />
 
 ## Kruskal算法
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191016095545223.png" alt="image-20191016095545223" style="zoom: 33%;" />
+<img src="img/image-20191016095545223.png" alt="image-20191016095545223" style="zoom: 33%;" />
 
 使用并查集 
 

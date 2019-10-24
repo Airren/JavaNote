@@ -8,7 +8,7 @@
 
 - 工作任务规划
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191016101106008.png" alt="image-20191016101106008" style="zoom: 50%;" />
+<img src="img/image-20191016101106008.png" alt="image-20191016101106008" style="zoom: 50%;" />
 
 广度优先遍历 -> 最短路径树 Shortest Path Tree
 
@@ -18,7 +18,7 @@
 
 无权图的最短路径
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191016101601838.png" alt="image-20191016101601838" style="zoom:33%;" />
+<img src="img/image-20191016101601838.png" alt="image-20191016101601838" style="zoom:33%;" />
 
 松弛操作是求最短路径的核心
 
@@ -30,7 +30,7 @@
 
 复杂度 O(ElogV)
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191016102519633.png" alt="image-20191016102519633" style="zoom:33%;" />
+<img src="img/image-20191016102519633.png" alt="image-20191016102519633" style="zoom:33%;" />
 
 ## 负权边和Bellman-Ford算法
 
@@ -44,7 +44,7 @@ Bellman-Ford 判断图中是否有负权环
 
 复杂度O(EV)
 
-<img src="/Users/airren/Documents/JavaNote/imooc/imooc_算法与数据结构综合提升篇/img/image-20191016120522021.png" alt="image-20191016120522021" style="zoom:33%;" />
+<img src="img/image-20191016120522021.png" alt="image-20191016120522021" style="zoom:33%;" />
 
 
 

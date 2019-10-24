@@ -11,7 +11,7 @@
 #### 归并排序
 - 将数据分为左右两半，分别归并排序，再把两个有序数据归并
 - 如何归并
-  ![](img/2019-09-16-00-15-06.png)
+  <img src="img/2019-09-16-00-15-06.png" style="zoom:33%;" />
 
 归并节点的排序-- K路归并 使用堆实现 Priority Queue
 ![](img/2019-09-16-00-21-17.png)
@@ -138,7 +138,7 @@ try{
 }finally{
     databaseConnection.close(); // 关闭连接时候也有可能出现异常
 }
-``` 
+```
 新写法 Java 1.7以后
 ```Java
 try(Database databaseConnection = connect(...)){
