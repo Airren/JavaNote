@@ -29,16 +29,17 @@ def dfs(arr,i):
         if  arr[i]==-1:
             return 0
         else:
-            left = dfs(arr,i*2+1,ans)
-            right = dfs(arr,i*2+2,ans)
+            left = dfs(arr,i*2+1)
+            right = dfs(arr,i*2+2)
             ans = max(ans, left + right)
             return max(left, right) + 1
-def diameterOfBinaryTree(arr,ans):
-    ans = dfs(arr,0,ans)
+def diameterOfBinaryTree(arr):
+    global ans
+    ans = dfs(arr,0)
     return ans
 if __name__ == '__main__':
     arr = list(int(i) for i in input().split(" "))
-    print(diameterOfBinaryTree(arr,ans))
+    print(diameterOfBinaryTree(arr))
 ```
 
 
