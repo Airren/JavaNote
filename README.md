@@ -41,7 +41,41 @@ if __name__ == '__main__':
     arr = list(int(i) for i in input().split(" "))
     print(diameterOfBinaryTree(arr))
 ```
+--------------
+```python 
 
+
+class Solution(object):
+    def diameterOfBinaryTree(self, arr,root):
+        self.ans = 0
+        def dfs(arr,root):
+            if root >= len(arr) :
+                return 0
+            if  arr[root]== -1:
+                return 0
+
+            left = dfs(arr, root*2)
+
+            right = dfs(arr, root*2+1)
+
+            self.ans = max(self.ans, left + right)
+
+            return max(left, right) + 1
+
+        dfs(arr,root)
+        return self.ans
+if __name__ == '__main__':
+    arr = list(int(i) for i in input().split(" "))
+    s = Solution()
+    root = 1;
+    arr = [0]+arr
+
+    print(s.diameterOfBinaryTree(arr, root))
+
+
+
+    # 0 1 2 3 4 -1 -1 -1
+````
 
 
 
