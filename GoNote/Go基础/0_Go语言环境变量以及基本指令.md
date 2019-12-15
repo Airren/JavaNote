@@ -1,4 +1,4 @@
-# Go入门笔记
+# Go语言环境变量以及基本指令
 
 ## 1. Go语言介绍
 
@@ -69,6 +69,8 @@ OS X->  ~/.bash_profile(单一用户) 或者 /etc/profile（所有用户）
 ##### GOPATH
 
 该环境变量为**Go语言工作区的集合**
+
+> go 1.12 版本中支持 go mod 不再使用go path
 
 ##### GOBIN
 
@@ -338,7 +340,30 @@ go run 常用标记的使用
 
 - 执行该命令以若干源码文件作为参数时，只有这些文件会被编译（如果缺少依赖会编译错误）
 
+
+
+例如：` /Users/airren/go/src/github.com/airren/day01/helloworld/main.go`
+
+如果对`main.go`进行编译，
+
+- 可以直接在`hello word`路径下执行`go build`
+- 或者再任意路径执行`go build github.com/airren/day01/helloworld`， 项目的路径是从`$GOPATH/src`后开始写起
+
+编译生成的可执行文件在执行`go build`的当前路径下。
+
+
+
+```sh
+go build -o hello  # 指定编译后的文件名
+```
+
+
+
+
+
 #### 3.3 go install 
+
+先执行 go build 后copy
 
 - 用于编译并安装代码包或源码文件
 - 安装代码包会在当前工作区的 `pkg/<平台相关目录>`下生成归档文件
@@ -368,3 +393,45 @@ go get常用标记的使用
 -x # 显示过程
 ```
 
+
+
+## 4. 跨平台编译
+
+交叉编译
+
+默认我们`go build`的可执行文件都是当前操作系统可执行的文件，如果我想在windows下编译一个linux下可执行文件，那需要怎么做呢？
+
+只需要指定目标操作系统的平台和处理器架构即可：
+
+```bash
+SET CGO_ENABLED=0  // 禁用CGO
+SET GOOS=linux  // 目标平台是linux
+SET GOARCH=amd64  // 目标处理器架构是amd64
+```
+
+使用了cgo的代码是不支持跨平台编译的
+
+然后再执行`go build`命令，得到的就是能够在Linux平台运行的可执行文件了。
+
+Mac 下编译 Linux 和 Windows平台 64位 可执行程序：
+
+```bash
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
+CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build
+```
+
+Linux 下编译 Mac 和 Windows 平台64位可执行程序：
+
+```bash
+CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build
+CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build
+```
+
+Windows下编译Mac平台64位可执行程序：
+
+```bash
+SET CGO_ENABLED=0
+SET GOOS=darwin
+SET GOARCH=amd64
+go build
+```
