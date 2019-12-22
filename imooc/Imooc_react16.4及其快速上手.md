@@ -2,16 +2,18 @@
 
 ## react简介以及语法基础
 
-react Fiber // React 16 之后的版本对应的框架
+react Fiber // React 16 之后的版本对应的框架  
+
+`redux`
 
 react 环境搭建
 
 React 脚手架工具  create-react-app
 
-```sj
-npx create-react-app todolist
+```sh
+npx create-react-app todolist  # create-react-app
 cd todolist
-yarn start
+yarn start  # npm run start
 ```
 
 
@@ -43,11 +45,14 @@ Index.js 是项目的入口
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
-// 组件，大写字母开头
+// 组件，大写字母开头   s
 import TodoList from './TodoList';
+
 
 ReactDOM.render(<TodoList />, document.getElementById('root'));
 ```
+
+> 所有的组件都是大写字母开头的， 引入`React`是为了识别大写字母开头的组件
 
 ### TodoList.js
 
@@ -77,7 +82,7 @@ class TodoList extends Component {
   }
 
   handleAdd=()=> {
-    // this.state.list.push("hello world")
+    // this.state.list.push("hello world")   这样写是不工作的
     this.setState({
       list: [...this.state.list, this.state.inputValue],
       inputValue: ''
