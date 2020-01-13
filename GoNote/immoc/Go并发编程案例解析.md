@@ -218,7 +218,7 @@ Influx db关键概念
   - fields 各种记录的值
   - time 数据记录的时间戳， 也是自动生成的主索引
 
-![image-20191122171646907](/Users/airren/Dropbox/JavaNote/GoNote/immoc/img/image-20191122171646907.png)
+![image-20191122171646907](./immoc/img/image-20191122171646907.png)
 
 ### 分析监控需求
 

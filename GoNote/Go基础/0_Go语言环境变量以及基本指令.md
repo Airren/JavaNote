@@ -393,6 +393,12 @@ go get常用标记的使用
 -x # 显示过程
 ```
 
+### 3.5 godoc
+
+```
+go get golang.org/x/tools/cmd/godoc
+```
+
 
 
 ## 4. 跨平台编译
