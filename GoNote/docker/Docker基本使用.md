@@ -4,7 +4,7 @@
 
 把yum包更新到最新
 
-```shell
+```sh
 yum update
 ```
 
